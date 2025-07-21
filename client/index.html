@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>QR Machine Maintenance</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/html5-qrcode" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <h1>Scan Machine QR</h1>
+  <div id="qr-reader" style="width: 300px;"></div>
+
+  <div id="machine-info" class="hidden">
+    <h2>Machine Info</h2>
+    <p><strong>ID:</strong> <span id="machine-id"></span></p>
+    <p><strong>Name:</strong> <span id="machine-name"></span></p>
+    <p><strong>Location:</strong> <span id="machine-location"></span></p>
+
+    <h3>Log Maintenance</h3>
+    <form id="log-form">
+      <input type="text" id="technician" placeholder="Technician Name" required />
+      <textarea id="remarks" placeholder="Remarks" required></textarea>
+      <input type="date" id="next-date" required />
+      <button type="submit">Submit Log</button>
+    </form>
+
+    <div id="response-msg"></div>
+  </div>
+</body>
+</html>
